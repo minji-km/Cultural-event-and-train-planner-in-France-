@@ -25,7 +25,7 @@ for ville in grd_villes:
         longitude_moyenne = tab_df['longitude'].mean()
 
         # Créez la carte
-        carte = folium.Map(location=[latitude_moyenne, longitude_moyenne], zoom_start=20)
+        carte = folium.Map(location=[latitude_moyenne, longitude_moyenne], zoom_start=12)
 
         # Ajoutez des marqueurs à la carte
         for idx, row in tab_df.iterrows():
