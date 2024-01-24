@@ -3,3 +3,4 @@ trainline
 folium
 streamlit-folium
 datetime
+bokeh
