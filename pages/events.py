@@ -11,4 +11,4 @@ date_depart = st.date_input('Date de départ', min_value=datetime.date.today())
 
 df = load_data()
 
-tab1, tab2 = st.tabs(grd_villes)
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs(grd_villes)
