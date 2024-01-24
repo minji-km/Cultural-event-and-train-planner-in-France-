@@ -1,6 +1,8 @@
 import streamlit as st
 from Home import load_data
 import datetime
+import folium
+from streamlit_folium import st_folium
 
 grd_villes = ['Paris', 'Avignon', 'Bordeaux', 'Lille', 'Lyon', 'Marseille',
               'Montpellier', 'Nantes', 'Nice', 'Toulouse']
@@ -11,4 +13,27 @@ date_depart = st.date_input('Date de départ', min_value=datetime.date.today())
 
 df = load_data()
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs(grd_villes)
+for ville in grd_villes:
+    tab = st.tab(ville)
+    
+    with tab:
+        # Filtrez le DataFrame en fonction de la ville
+        tab_df = df[df['result_city'] == ville]
+
+        # Calculez la latitude et la longitude moyennes
+        latitude_moyenne = tab_df['latitude'].mean()
+        longitude_moyenne = tab_df['longitude'].mean()
+
+        # Créez la carte
+        carte = folium.Map(location=[latitude_moyenne, longitude_moyenne], zoom_start=7)
+
+        # Ajoutez des marqueurs à la carte
+        for idx, row in tab_df.iterrows():
+            folium.Marker(
+                location=[row['latitude'], row['longitude']],
+                popup=row['titre'],
+                icon=folium.Icon(icon="cloud"),
+            ).add_to(carte)
+
+        # Affichez la carte
+        st_folium(carte, width=1000)
