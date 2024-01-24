@@ -18,4 +18,4 @@ for idx, row in df.iterrows():
         icon=folium.Icon(icon="cloud"),
     ).add_to(carte)
 
-st_data = st_folium(carte, width=723)
+st_data = st_folium(carte, width=725)
