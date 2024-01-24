@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import trainline
 import folium
-import datetime
 from streamlit_folium import st_folium
 
 st.title("Planificateur d'évènements culturels")
