@@ -14,7 +14,7 @@ date_depart = st.date_input('Date de départ', min_value=datetime.date.today())
 df = load_data()
 
 for ville in grd_villes:
-    tab = st.beta_expander(ville)
+    tab = st.expander(ville)
     
     with tab:
         # Filtrez le DataFrame en fonction de la ville
