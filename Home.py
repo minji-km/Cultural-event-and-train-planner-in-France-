@@ -6,6 +6,9 @@ from streamlit_folium import st_folium
 
 st.title("Planificateur d'évènements culturels")
 
+grd_villes = ['Paris', 'Avignon', 'Bordeaux', 'Lille', 'Lyon', 'Marseille',
+              'Montpellier', 'Nantes', 'Nice', 'Toulouse']
+
 @st.cache_data
 def load_data():
     df = pd.read_csv("concerts.csv")
@@ -25,3 +28,30 @@ for idx, row in df.iterrows():
     ).add_to(carte)
 
 st_data = st_folium(carte, width=1000)
+
+# Coordonnées des villes
+coords = {
+    'Paris': [48.8566, 2.3522],
+    'Avignon': [43.9493, 4.8055],
+    'Bordeaux': [44.8378, -0.5792],
+    'Lille': [50.6292, 3.0573],
+    'Lyon': [45.75, 4.85],
+    'Marseille': [43.2965, 5.3698],
+    'Montpellier': [43.6108, 3.8767],
+    'Nantes': [47.2186, -1.5536],
+    'Nice': [43.7034, 7.2663],
+    'Toulouse': [43.6043, 1.4437]
+}
+
+# Création des boutons
+for ville in grd_villes:
+    if st.button(ville):
+        # Mise à jour des coordonnées de la carte
+        carte = folium.Map(location=coords[ville], zoom_start=7)
+        for idx, row in df.iterrows():
+            folium.Marker(
+                location=[row['latitude'], row['longitude']],
+                popup=row['titre'],
+                icon=folium.Icon(icon="cloud"),
+            ).add_to(carte)
+        st_folium(carte, width=1000)
