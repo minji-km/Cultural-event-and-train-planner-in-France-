@@ -9,8 +9,7 @@ st.title("Planificateur d'évènements culturels")
 @st.cache_data
 def load_data():
     df = pd.read_csv("concerts.csv")
-
-    return
+    return df
 
 df = load_data()
 
