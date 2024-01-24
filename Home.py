@@ -5,7 +5,14 @@ import folium
 from streamlit_folium import st_folium
 
 st.title("Planificateur d'évènements culturels")
-df = pd.read_csv("concerts.csv")
+
+@st.cache_data
+def load_data():
+    df = pd.read_csv("concerts.csv")
+
+    return
+
+df = load_data()
 
 latitude_moyenne = df['latitude'].mean()
 longitude_moyenne = df['longitude'].mean()
