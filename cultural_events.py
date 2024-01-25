@@ -3,7 +3,6 @@ import pandas as pd
 from streamlit_folium import st_folium
 import folium
 
-st.set_page_config(layout="wide")
 st.title("Evenements culturels à Paris")
 
 # grd_villes = ['Avignon', 'Bordeaux', 'Lille', 'Lyon', 'Marseille',
@@ -27,7 +26,7 @@ for idx, row in df.iterrows():
         icon=folium.Icon(icon="cloud"),
     ).add_to(carte)
 
-st_data = st_folium(carte, width=1250)
+st_data = st_folium(carte, width=750)
 
 
 # i = 0
