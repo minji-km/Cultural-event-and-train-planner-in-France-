@@ -6,7 +6,7 @@ st.title("Planificateur d'évènements culturels")
 grd_villes = ['Paris', 'Avignon', 'Bordeaux', 'Lille', 'Lyon', 'Marseille',
               'Montpellier', 'Nantes', 'Nice', 'Toulouse']
 
-@st.cache
+@st.cache_data
 def load_data():
     df = pd.read_csv("concerts.csv")
     return df
