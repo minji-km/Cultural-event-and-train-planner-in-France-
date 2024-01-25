@@ -22,7 +22,7 @@ i = 0
 for ville in grd_villes:
     with tabs[i]:
         st.map(df[df['result_city']==ville][['latitude', 'longitude']])
-    
+        st.write(df[df['result_city']==ville])
     i+=1
 
 
