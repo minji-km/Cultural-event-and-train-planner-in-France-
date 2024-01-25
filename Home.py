@@ -40,7 +40,3 @@ for idx, row in df.iterrows():
     ).add_to(carte)
 
 st_data = st_folium(carte, width=1000)
-
-ville = st.selectbox('Choisissez une ville', list(coords.keys()))
-carte.location = coords[ville]
-st_folium(carte, width=1000)
