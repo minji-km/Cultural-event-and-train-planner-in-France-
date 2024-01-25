@@ -3,6 +3,8 @@ import pandas as pd
 import trainline
 import folium
 from streamlit_folium import st_folium
+import ipywidgets as widgets
+from IPython.display import display
 
 st.title("Planificateur d'évènements culturels")
 
