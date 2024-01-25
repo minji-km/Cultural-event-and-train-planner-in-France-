@@ -27,7 +27,7 @@ for idx, row in df.iterrows():
         icon=folium.Icon(icon="cloud"),
     ).add_to(carte)
 
-st_data = st_folium(carte, width=750)
+st_data = st_folium(carte, width=1250)
 
 
 # i = 0
