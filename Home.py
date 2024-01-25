@@ -16,15 +16,13 @@ df['latitude'] = df['latitude'].astype(float)
 df['longitude'] = df['longitude'].astype(float)
 
 
-tabs = st.tabs(grd_villes)
+st.map(df[df['result_city']=='Paris'])
 
-i = 0
-for ville in grd_villes:
-    with tabs[i]:
-        st.map(df[df['result_city']==ville])
-    i+=1
+# tabs = st.tabs(grd_villes)
 
+# i = 0
+# for ville in grd_villes:
+#     with tabs[i]:
+#         st.map(df[df['result_city']==ville])
+#     i+=1
 
-# ville = st.selectbox('Choisissez une ville', list(coords.keys()))
-
-# st.map(df['latitude', 'longitude'])
