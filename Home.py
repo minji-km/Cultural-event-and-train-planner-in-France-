@@ -20,7 +20,7 @@ tabs = st.tabs(grd_villes)
 
 st.map(df[df['result_city']=='Paris'][['latitude', 'longitude']])
 i = 1
-for ville in grd_villes:
+for ville in grd_villes - 'Paris':
     with tabs[i]:
         st.map(df[df['result_city']==ville][['latitude', 'longitude']])
         st.write(df[df['result_city']==ville])
