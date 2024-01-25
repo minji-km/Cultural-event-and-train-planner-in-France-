@@ -3,6 +3,7 @@ import pandas as pd
 from streamlit_folium import st_folium
 import folium
 
+st.set_page_config(layout="wide")
 st.title("Evenements culturels à Paris")
 
 # grd_villes = ['Avignon', 'Bordeaux', 'Lille', 'Lyon', 'Marseille',
@@ -17,7 +18,7 @@ df = load_data()
 
 paris_data = df[df['result_city']=='Paris']
 
-carte = folium.Map(location=[48.8566, 2.3522], zoom_start=13)
+carte = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
 
 for idx, row in df.iterrows():
     folium.Marker(
