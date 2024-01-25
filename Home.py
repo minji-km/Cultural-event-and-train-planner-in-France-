@@ -11,9 +11,9 @@ def load_data():
     df = pd.read_csv("concerts.csv")
     return df
 
-df = load_data()
-df['latitude'] = df['latitude'].astype(float)
-df['longitude'] = df['longitude'].astype(float)
+# df = load_data()
+# df['latitude'] = df['latitude'].astype(float)
+# df['longitude'] = df['longitude'].astype(float)
 
 # st.map(df[df['result_city']=='Paris'])
 
