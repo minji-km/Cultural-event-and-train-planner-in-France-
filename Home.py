@@ -15,7 +15,7 @@ df = load_data()
 df['latitude'] = df['latitude'].astype(float)
 df['longitude'] = df['longitude'].astype(float)
 
-st.map(df[df['result_city']=='Paris'])
+# st.map(df[df['result_city']=='Paris'])
 
 
 # i = 0
