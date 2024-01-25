@@ -24,5 +24,6 @@ coords = {
 }
 
 ville = st.selectbox('Choisissez une ville', list(coords.keys()))
-df_ville = pd.DataFrame([coords[ville]], columns=['lat', 'lon'])
-st.map(df_ville)
+df['latitude'] = df['latitude'].astype(float)
+df['longitude'] = df['longitude'].astype(float)
+st.map(df[['latitude', 'longitude']])
