@@ -20,9 +20,6 @@ tabs = st.tabs(grd_villes)
 with tabs[0]:
     st.map(df[df['result_city']=='Paris'])
 
-with tabs[1]:
-    st.map(df[df['result_city']=='Avignon'])
-
 with tabs[2]:
     st.map(df[df['result_city']=='Bordeaux'])
 
