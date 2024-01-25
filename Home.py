@@ -26,7 +26,7 @@ coords = {
 
 tabs = st.tabs(coords.keys())
 
-for i in len(coords):
+for i in range(len(coords)):
     st.write(i)
 
 
