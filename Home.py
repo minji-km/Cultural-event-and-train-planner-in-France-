@@ -23,7 +23,14 @@ coords = {
     'Toulouse': [43.6043, 1.4437]
 }
 
-ville = st.selectbox('Choisissez une ville', list(coords.keys()))
+
+tabs = st.tabs(coords.keys())
+
+for i in len(coords):
+    st.write(i)
+
+
+# ville = st.selectbox('Choisissez une ville', list(coords.keys()))
 df['latitude'] = df['latitude'].astype(float)
 df['longitude'] = df['longitude'].astype(float)
-st.map(df[['latitude', 'longitude']])
+# st.map(df['latitude', 'longitude'])
