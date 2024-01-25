@@ -19,9 +19,9 @@ df['longitude'] = df['longitude'].astype(float)
 tabs = st.tabs(grd_villes)
 
 st.map(df[df['result_city']=='Paris'][['latitude', 'longitude']])
-i = 1
+i = 0
 for ville in grd_villes:
-    with tabs[i]:
+    with tabs[i+1]:
         st.map(df[df['result_city']==ville][['latitude', 'longitude']])
         st.write(df[df['result_city']==ville])
     i+=1
