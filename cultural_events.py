@@ -3,6 +3,7 @@ import pandas as pd
 from streamlit_folium import st_folium
 import folium
 
+st.set_page_config(layout="centered")
 st.title("Evenements culturels à Paris")
 
 # grd_villes = ['Avignon', 'Bordeaux', 'Lille', 'Lyon', 'Marseille',
