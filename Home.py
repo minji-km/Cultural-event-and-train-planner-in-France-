@@ -41,12 +41,6 @@ for idx, row in df.iterrows():
 
 st_data = st_folium(carte, width=1000)
 
-# Création des boutons
-def on_button_clicked(b):
-    carte.location = coords[b.description]
-    display(carte)
-
-for ville in coords.keys():
-    button = widgets.Button(description=ville)
-    button.on_click(on_button_clicked)
-    display(button)
+ville = st.selectbox('Choisissez une ville', list(coords.keys()))
+carte.location = coords[ville]
+st_folium(carte, width=1000)
