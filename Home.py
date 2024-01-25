@@ -3,8 +3,8 @@ import pandas as pd
 
 st.title("Planificateur d'évènements culturels")
 
-grd_villes = ['Avignon', 'Bordeaux', 'Lille', 'Lyon', 'Marseille',
-              'Montpellier', 'Nantes', 'Nice', 'Toulouse']
+# grd_villes = ['Avignon', 'Bordeaux', 'Lille', 'Lyon', 'Marseille',
+#               'Montpellier', 'Nantes', 'Nice', 'Toulouse']
 
 @st.cache_data
 def load_data():
