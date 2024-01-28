@@ -3,6 +3,4 @@ trainline
 folium
 streamlit-folium
 datetime
-# bokeh
-ipywidgets
-IPython
+trainline
