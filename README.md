@@ -6,7 +6,7 @@ Ce projet vise à renforcer l'économie locale et à valoriser la culture franç
 
 ## Description
 Ce projet vise à faciliter la planification de voyages culturels dans les grandes villes françaises, en prenant en compte les aspects écologiques et économiques. 
-Il intègre le scrapping de données sur des événements culturels via BilletRéduc et l'utilisation de l'API SNCF ou Trainline pour les informations sur les trains. 
+Il intègre le scrapping de données sur des événements culturels via [BilletRéduc](https://www.billetreduc.com/) et l'utilisation de l'API Trainline pour les informations sur les trains. 
 Les utilisateurs peuvent visualiser les événements sur une carte interactive et calculer l'empreinte carbone de leurs déplacements, 
 s'alignant ainsi avec les engagements de développement durable de la SNCF ([Méthodologie de calcul de l'empreinte carbone](https://www.sncf.com/fr/engagements/developpement-durable/engagement-grand-groupe-pour-la-planete/methodologie-calcul-empreinte-carbone)). 
 Ce projet s'inspire de travaux existants sur le scrapping de données de voyages en train avec l'API de Trainline ([Trouvez le billet de train le moins cher](https://www.tducret.com/scraping/2018/09/05/trouvez-le-billet-de-train-le-moins-cher-grace-a-ce-module-python.html)),
