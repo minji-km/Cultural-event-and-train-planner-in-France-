@@ -113,6 +113,7 @@ def create_map(df):
         folium.Marker(
             location=[row['latitude'], row['longitude']],
             popup=row['titre'],
+            icon=folium.Icon(color='red',icon='location-dot',prefix='fa')
                 # ou toute autre information
         ).add_to(marker_cluster)
     
@@ -194,7 +195,7 @@ def main():
                     }
                     )
             # Convertir le DataFrame renommé en HTML et l'écrire dans Streamlit
-            st.write(df_sorted_renamed[["Nom de l'Événement", 'Description', 'Date de Début', 'Date de Fin', 'Prix', 'Réduction']].to_html(index=False), unsafe_allow_html=True)
+            st.write(df_sorted_renamed[["Nom de l'Événement", 'Description','lieu', 'Date de Début', 'Date de Fin', 'Prix', 'Réduction']].to_html(index=False), unsafe_allow_html=True)
         
         
         # Sélection de l'événement
