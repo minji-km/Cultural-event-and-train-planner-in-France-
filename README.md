@@ -13,7 +13,7 @@ Ce projet s'inspire de travaux existants sur le scrapping de données de voyages
 et cherche à regrouper et mieux visualiser les événements culturels pour une planification de voyage plus efficace et agréable.
 
 ## Utilisation
-Visitez [Cultural Streamlit App](https://cultural.streamlit.app/) pour interagir avec l'application. Recherchez des événements culturels, voyez les options de train, visualisez les emplacements sur une carte, et calculez l'empreinte carbone des voyages.
+Visitez [l'application Streamlit](https://concerts-and-train-planner-in-france.streamlit.app/) pour interagir avec l'application. Recherchez des événements culturels, voyez les options de train, visualisez les emplacements sur une carte, et calculez l'empreinte carbone des voyages.
 
 ## Installation
 
