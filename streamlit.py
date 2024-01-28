@@ -90,7 +90,7 @@ def load_csv_data(file_path, delimiter=',', encoding=None):
 
 # Chargement et préparation des données
 df_concerts = load_csv_data('concerts.csv')
-df_concerts['start_date'] = pd.to_datetime(df_concerts['start_date'])
+df_concerts['end_date'] = pd.to_datetime(df_concerts['end_date'])
 df_concerts['start_date'] = pd.to_datetime(df_concerts['start_date'])
 today = datetime.today()
 # Filtrage pour garder les concerts dont la date de fin est soit postérieure à aujourd'hui, soit nulle
