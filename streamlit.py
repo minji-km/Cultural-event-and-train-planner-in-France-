@@ -92,7 +92,8 @@ def load_csv_data(file_path, delimiter=',', encoding=None):
 df_concerts = load_csv_data('concerts.csv')
 df_concerts['end_date'] = pd.to_datetime(df_concerts['end_date'])
 today = datetime.today()
-df_concerts = df_concerts[df_concerts['end_date'] >= today]
+# Filtrage pour garder les concerts dont la date de fin est soit postérieure à aujourd'hui, soit nulle
+df_concerts = df_concerts[(df_concerts['end_date'] >= today) | pd.isnull(df_concerts['end_date'])]
 
 df_empreinte = load_csv_data('Empreinte_carbone_trajet_train.csv', delimiter=';', encoding='ISO-8859-1')
 df_lieu_concert = load_csv_data('lieu_concert.geocoded.csv')
